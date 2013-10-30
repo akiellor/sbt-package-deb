@@ -1,0 +1,6 @@
+#!/bin/sh
+test -f ~/.sbtconfig && . ~/.sbtconfig
+
+HERE="`dirname \"$0\"`"
+
+exec java ${SBT_OPTS} -jar "$HERE/../libexec/sbt-launch.jar" "$@"

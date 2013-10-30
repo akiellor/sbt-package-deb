@@ -3,4 +3,4 @@ test -f ~/.sbtconfig && . ~/.sbtconfig
 
 HERE="`dirname \"$0\"`"
 
-exec java ${SBT_OPTS} -jar "$HERE/../libexec/sbt-launch.jar" "$@"
+exec java -XX:MaxPermSize=256m ${SBT_OPTS} -jar "$HERE/../libexec/sbt-launch.jar" "$@"
